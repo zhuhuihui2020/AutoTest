@@ -1,16 +1,23 @@
 package leetcode;
-//冒泡排序-第一种写法
-public class CodeTest {
+//冒泡排序第三种，
+public class CodeTest3 {
     public static void bubbleSort(int[] arr){
         //循环次数计数
         int num=0;
-        for(int i=0;i<arr.length;i++){
-            for (int j=0;j<arr.length-i-1;j++){
+        boolean flag=true;
+        int lastIndex=arr.length-1;
+        int tmpIndex=0;
+        while(flag){
+            flag=false;
+            for (int j=0;j<lastIndex;j++){
                 if(arr[j]>arr[j+1]){
                     swap(arr,j,j+1);
+                    tmpIndex=j+1;
+                    flag=true;
                 }
                 num++;
             }
+            lastIndex=tmpIndex;
         }
         //输出循环次数
         System.out.println("循环次数:"+num);
