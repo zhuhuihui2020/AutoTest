@@ -1,25 +1,19 @@
 package leetcode;
-//冒泡排序--第二种写法，优点：如果一轮比较中没有发生过交换，则立即停止排序，因为此时剩余数字一定已经有序了
-public class CodeTest2 {
+//冒泡排序-第一种写法
+public class BubbleSort {
     public static void bubbleSort(int[] arr){
         //循环次数计数
         int num=0;
-        int count;
         for(int i=0;i<arr.length;i++){
-            count=0;
             for (int j=0;j<arr.length-i-1;j++){
                 if(arr[j]>arr[j+1]){
                     swap(arr,j,j+1);
-                    count=count+1;
                 }
                 num++;
             }
-            if(count==0){
-                //输出循环次数
-                System.out.println("循环次数:"+num);
-                return;
-            }
         }
+        //输出循环次数
+        System.out.println("循环次数:"+num);
     }
 
     public static void swap(int[] arr,int i,int j){

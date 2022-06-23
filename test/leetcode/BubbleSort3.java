@@ -1,6 +1,6 @@
 package leetcode;
 //冒泡排序第三种，
-public class CodeTest3 {
+public class BubbleSort3 {
     public static void bubbleSort(int[] arr){
         //循环次数计数
         int num=0;
