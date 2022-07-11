@@ -1,7 +1,4 @@
 package leetcode;
-
-//快速排序
-//采用了分治思想
 /**
  * 快速排序算法的基本思想是：
  *
@@ -9,31 +6,39 @@ package leetcode;
  * 遍历数组，将比基数大的数字放到它的右边，比基数小的数字放到它的左边。遍历完成后，数组被分成了左右两个区域
  * 将左右两个区域视为两个数组，重复前两个步骤，直到排序完成
  */
-public class QuickSort {
-
+public class QuickSort2 {
     public static void quickSort(int[] arr){
         quickSort(arr,0,arr.length-1);
     }
-    public static void quickSort(int[] arr,int start,int end){
-        if(start>end) return;
-        //把每个分区的第一个数当作基数
-        int base=arr[start];
-        int i=start;
-        int j=end;
-        while(i<j){
-            while (i<j&&arr[j]>=base){
-                j--;
+
+    public static void quickSort(int[] arr,int left,int right){
+        if(left>right){
+            return;
+        }
+        int base=partition(arr,left,right);
+        if (left<right){
+            quickSort(arr,left,base-1);
+            quickSort(arr,base+1,right);
+        }
+    }
+
+    //每个区间内比较，移动
+    public static int partition(int[] arr,int left,int right){
+        int base=left;
+        int tmp=arr[left];
+        while(left<right){
+            while (left < right && arr[right]>=tmp) {
+                right--;
             }
-            while (i<j&&arr[i]<=base){
-                i++;
+            while (left < right && arr[left]<=tmp) {
+                left++;
             }
-            if(i<j){
-                swap(arr,i,j);
+            if(left<right){
+                swap(arr,left,right);
             }
         }
-        swap(arr,start,i);
-        quickSort(arr,start,i-1);
-        quickSort(arr,i+1,end);
+        swap(arr,base,left);
+        return left;
     }
 
     public static void swap(int[] arr,int i,int j){
@@ -50,5 +55,4 @@ public class QuickSort {
             System.out.print(i+" ");
         }
     }
-
 }
