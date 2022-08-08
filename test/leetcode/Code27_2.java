@@ -5,30 +5,19 @@ public class Code27_2 {
         int left=0;
         int right=nums.length-1;
         while (left<=right){
-            System.out.println("000");
             if(nums[left]==val){
                 nums[left]=nums[right];
                 right--;
-                System.out.println("111");
-            }
-            while (nums[left]!=val){
-                System.out.println("left:"+left);
-                System.out.println("right:"+right);
-                if(left<right){
-                    left++;
-                    System.out.println("222");
-                }else{
-                    System.out.println("333");
-                    break;
-                }
+            }else {
+                left++;
             }
         }
         return left;
     }
 
     public static void main(String[] args) {
-        int[] nums=new int[]{0,1,2,2,3,0,4,2};
-        int val=2;
+        int[] nums=new int[]{3,2,2,3};
+        int val=3;
         System.out.println(removeElement(nums,val));
     }
 
