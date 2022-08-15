@@ -18,6 +18,8 @@ public class Code88_2 {
             }else if(m<0&&n>=0){
                 nums1[total]=nums2[n];
                 n--;
+            }else{
+                return;
             }
             total--;
         }
