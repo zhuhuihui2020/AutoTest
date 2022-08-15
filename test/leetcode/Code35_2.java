@@ -1,5 +1,5 @@
 package leetcode;
-
+//搜索插入位置
 public class Code35_2 {
     public int searchInsert(int[] nums, int target){
         int left=0;

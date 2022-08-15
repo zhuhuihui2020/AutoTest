@@ -1,5 +1,5 @@
 package leetcode;
-
+//回文链表
 public class Code234 {
     public boolean isPalindrome(ListNode head) {
         int length=length(head);

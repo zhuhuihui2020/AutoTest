@@ -1,5 +1,5 @@
 package leetcode;
-
+//最大连续1的个数
 public class Code485 {
     public static int findMaxConsecutiveOnes(int[] nums) {
         int maxCount=0;

@@ -1,5 +1,5 @@
 package leetcode;
-
+//寻找数组的中心下标
 public class Code724 {
     public static int pivotIndex(int[] nums) {
         int sumLeft=0;

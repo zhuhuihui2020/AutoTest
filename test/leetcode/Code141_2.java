@@ -1,5 +1,5 @@
 package leetcode;
-
+//环形链表
 //快慢指针
 public class Code141_2 {
     public boolean hasCycle(ListNode2 head) {

@@ -1,5 +1,5 @@
 package leetcode;
-
+//Excel表列序号
 public class Code171 {
     public int titleToNumber(String columnTitle) {
         char[] chars=columnTitle.toCharArray();
