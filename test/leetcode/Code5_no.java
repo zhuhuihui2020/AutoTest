@@ -1,6 +1,7 @@
 package leetcode;
-//最长回文字符串
-public class Code5 {
+
+//最长回文字符串--解法有误，忽略即可
+public class Code5_no {
     public static String longestPalindrome(String s) {
         char[] chars=s.toCharArray();
         //滑动的左右窗口坐标
