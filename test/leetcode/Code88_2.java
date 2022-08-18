@@ -5,7 +5,6 @@ public class Code88_2 {
         int total=m+n-1;
         m=m-1;
         n=n-1;
-        int max;
         while(total>=0){
             if(m>=0&&n>=0){
                 if(nums1[m]>nums2[n]){
