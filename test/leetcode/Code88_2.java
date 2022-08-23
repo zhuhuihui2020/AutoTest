@@ -18,6 +18,7 @@ public class Code88_2 {
                 nums1[total]=nums2[n];
                 n--;
             }else{
+                //如果m>=0,n<0，说明nums2数组已经都添加添加到nums1数组后面了，nums1数组又是个有序数组，所以不用再排了
                 return;
             }
             total--;
