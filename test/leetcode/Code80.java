@@ -1,7 +1,6 @@
 package leetcode;
 
 import java.util.HashMap;
-import java.util.Map;
 
 //删除有序数组中的重复项 II
 public class Code80 {

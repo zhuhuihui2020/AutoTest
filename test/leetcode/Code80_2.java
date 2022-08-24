@@ -1,5 +1,6 @@
 package leetcode;
-
+//删除有序数组中的重复项 II
+//用count值做判断
 public class Code80_2 {
     public static int removeDuplicates(int[] nums) {
         int count=1;
