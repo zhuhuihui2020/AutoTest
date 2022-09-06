@@ -13,7 +13,7 @@ public class Code448_2 {
             hashSet.add(num);
         }
         for(int i=1;i<=nums.length;i++){
-            if(hashSet.contains(i)){
+            if(!hashSet.contains(i)){
                 list.add(i);
             }
         }
