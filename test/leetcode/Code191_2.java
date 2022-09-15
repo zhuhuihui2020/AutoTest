@@ -14,5 +14,4 @@ public class Code191_2 {
         }
         return count;
     }
-    
 }
