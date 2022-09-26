@@ -1,6 +1,8 @@
 package leetcode;
 
 //二叉树的最大深度
+//深度优先搜索 Deep first search
+//递归
 public class Code104 {
     public int maxDepth(TreeNode root) {
         if(root==null){
