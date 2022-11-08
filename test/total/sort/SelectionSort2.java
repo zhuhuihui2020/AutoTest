@@ -5,7 +5,7 @@ package total.sort;
  */
 public class SelectionSort2 {
     public static void selectionSort(int[] arr) {
-        for(int i=0;i<arr.length-1;i++){
+        for(int i=0;i<arr.length/2;i++){
             int minIndex=i;
             int maxIndex=arr.length-i-1;
             for(int j=i;j<arr.length-1-i;j++){
@@ -16,7 +16,13 @@ public class SelectionSort2 {
                     maxIndex=j+1;
                 }
             }
+            if(minIndex==maxIndex){
+                return;
+            }
             swap(arr,i,minIndex);
+            //很重要的一句代码，如果maxIndex恰好等于i，经过前一步最小值的置换，i位置上的值和minIndex置换了，也就是说，
+            // 现在最大值所在的下标变成了minIndex，所以需要这一步交换一下
+            if(maxIndex==i){maxIndex=minIndex;}
             swap(arr,arr.length-i-1,maxIndex);
         }
     }
