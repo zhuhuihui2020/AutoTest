@@ -21,6 +21,7 @@ public class QuickSort {
         int i=start;
         int j=end;
         while(i<j){
+            //这一步很重要，因为基数选择的是最左边的值，则要让最右边的指针先走，这样的话，可以保证，最后的i值所在位置的值一定比base小
             while (i<j&&arr[j]>=base){
                 j--;
             }
