@@ -7,8 +7,13 @@ package cyc2018.shuang_zhi_zhen;
  *
  * 你设计的解决方案必须满足 O(log n) 时间复杂度和 O(1) 空间复杂度。
  */
+//异或解法，时间复杂度为n
 public class Code540 {
     public int singleNonDuplicate(int[] nums) {
-        return 0;
+        int ret=0;
+        for (int a:nums){
+            ret=ret^a;
+        }
+        return ret;
     }
 }
