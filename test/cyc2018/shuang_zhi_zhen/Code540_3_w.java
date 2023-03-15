@@ -28,11 +28,11 @@ public class Code540_3_w {
                 }
             }
         }
-        return nums[left];
+        return nums[right];
     }
 
     public static void main(String[] args) {
-        int[] arr=new int[]{1,1,3,3,4,4,8,8,9};
+        int[] arr=new int[]{3,3,7,7,10,11,11};
         System.out.println(singleNonDuplicate(arr));
     }
 }
